@@ -4,7 +4,7 @@ class Awsd < Formula
   desc "AWS Profile Switcher in Go"
   homepage "https://github.com/pjaudiomv/awsd"
   url "https://github.com/pjaudiomv/awsd/archive/v0.0.1.tar.gz"
-  sha256 "ccd21e525e9e7c9d5e0f331e0a66270ebb75a99e6bfa394e012bbb9d839da886"
+  sha256 "29bc20c763416f22dc9fc0857c389e4178d3f7c7d9e5b2bac3b24b7a329de685"
   license "MIT"
   head "https://github.com/pjaudiomv/awsd.git", branch: "main", :tag => ver
   version ver
