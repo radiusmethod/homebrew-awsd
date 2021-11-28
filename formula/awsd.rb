@@ -12,7 +12,7 @@ class Awsd < Formula
   depends_on "go" => :build
 
   def installs
-    system "PREFIX=#{share} ./install.sh"
+    system "PREFIX=#{share}", "bash", "install.sh"
     bin.install Dir["#{share}/bin/*"]
   end
 
