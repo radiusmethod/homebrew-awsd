@@ -1,18 +1,15 @@
 class Awsd < Formula
-    ver = "0.0.2"
+    ver = "0.0.3"
     desc "AWS Profile Switcher in Go"
     homepage "https://github.com/pjaudiomv/awsd"
-    url "https://github.com/pjaudiomv/awsd/archive/v0.0.2.tar.gz"
-    sha256 "ce9c5ab8e03ff3027e60a694963301e76492df9d2e22f6efdd3c19051dc5732c"
+    url "https://github.com/pjaudiomv/awsd/archive/v0.0.3.tar.gz"
+    sha256 "a7c022feacd1e9bef07b8900c809dd41d076aa56461d043d276efe565a29cdaf"
     license "MIT"
     head "https://github.com/pjaudiomv/awsd.git", branch: "main", :tag => ver
     version ver
 
-    depends_on "go" => :build
-
     def install
-        system "PREFIX=#{share} ./configure.sh"
-        bin.install Dir["#{share}/bin/*"]
+        system "make", "install", "BINDIR=#{bin}"
     end
 
     test do
