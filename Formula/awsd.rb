@@ -1,4 +1,5 @@
 class Awsd < Formula
+    # renovate: datasource=gitlab-releases depName=pjaudiomv/awsd versioning=semver
     ver = "v0.0.2"
     desc "AWS Profile Switcher in Go"
     homepage "https://github.com/pjaudiomv/awsd"
