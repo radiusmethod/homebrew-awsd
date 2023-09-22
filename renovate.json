@@ -7,7 +7,7 @@
     {
       "fileMatch": [ "^awsd\\.rb$" ],
       "matchStrings": [
-        "# renovate: datasource=(?<datasource>.+?) depName=(?<depName>.+?) ( extractVersion=(?<extractVersion>.+?))?\\s.*ver =\"?(?<currentValue>.+?)\"?\\s"
+        "# renovate: datasource=(?<datasource>.+?) depName=(?<depName>.+?) ( extractVersion=(?<extractVersion>.+?))?\\s.*ver = \"?(?<currentValue>.+?)\"?\\s"
       ],
       "extractVersionTemplate": "{{#if extractVersion}}{{{extractVersion}}}{{else}}^v?(?<version>.+)${{/if}}"
     }
