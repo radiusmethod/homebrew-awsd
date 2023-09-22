@@ -8,11 +8,10 @@
       "fileMatch": [
         "^Formula\/awsd.rb$"
       ],
-      "matchStringsStrategy": "recursive",
       "matchStrings": [
         "# renovate: datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\s.*?ver = \"(?<currentValue>.*)\"\\s"
       ],
-      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}loose{{/if}}"
+      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}"
     }
   ]
 }
