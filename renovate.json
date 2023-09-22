@@ -6,13 +6,19 @@
   "regexManagers": [
     {
       "fileMatch": [
-        "(^|/)awsd.rb$"
+        "^Formula.awsd.rb$"
       ],
       "matchStringsStrategy": "recursive",
       "matchStrings": [
         "# renovate: datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\s.*?ver = \"(?<currentValue>.*)\"\\s"
       ],
       "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}loose{{/if}}"
+    },
+    {
+      "fileMatch": ["^Formula.awsd.rb$"],
+      "matchStrings": ["ver = \"(?<currentValue>.*?\"\\n"],
+      "depNameTemplate": "pjaudiomv/awsd",
+      "datasourceTemplate": "gitlab-releases"
     }
   ]
 }
