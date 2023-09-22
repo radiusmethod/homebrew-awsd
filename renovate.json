@@ -5,13 +5,12 @@
   ],
   "regexManagers": [
     {
-      "fileMatch": [
-        "^Formula\/awsd.rb$"
-      ],
+      "fileMatch": ["^Formula/awsd.rb$"],
       "matchStrings": [
-        "# renovate: datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\s.*?ver = \"(?<currentValue>.*)\"\\s"
+        "ver = \"(?<currentValue>.*?)\""
       ],
-      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}"
+      "depNameTemplate": "pjaudiomv/awsd",
+      "datasourceTemplate": "github-releases"
     }
   ]
 }
