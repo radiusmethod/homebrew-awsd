@@ -10,7 +10,7 @@
       ],
       "matchStringsStrategy": "recursive",
       "matchStrings": [
-        "datasource=(?<datasource>.*?) depName=(?<depName>.*?)( extractVersion=(?<extractVersion>.+?)?\\sver =\"(?<currentValue>.*)\"\\s"
+        "datasource=(?<datasource>.*?) depName=(?<depName>.*?)( extractVersion=(?<extractVersion>.+?)?\\s.*ver =\"?(?<currentValue>.+?)\"?\\s"
       ],
       "extractVersionTemplate": "{{#if extractVersion}}{{{extractVersion}}}{{else}}^v?(?<version>.+)${{/if}}"
     }
