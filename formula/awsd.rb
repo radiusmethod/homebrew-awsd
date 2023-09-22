@@ -1,5 +1,5 @@
 class Awsd < Formula
-    ver = "0.0.2"
+    ver = "v0.0.2"
     desc "AWS Profile Switcher in Go"
     homepage "https://github.com/pjaudiomv/awsd"
     url "https://github.com/pjaudiomv/awsd/archive/v0.0.2.tar.gz"
