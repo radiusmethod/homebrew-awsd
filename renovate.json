@@ -6,11 +6,11 @@
   "regexManagers": [
     {
       "fileMatch": [
-        "(^|/)awsd.rb$"
+        "^awsd$"
       ],
       "matchStringsStrategy": "recursive",
       "matchStrings": [
-        "# renovate: datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\s.*?ver = \"(?<currentValue>.*)\"\\s"
+        "datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\sver =\"(?<currentValue>.*)\"\\s"
       ],
       "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}"
     }
