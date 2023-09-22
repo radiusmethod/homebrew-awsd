@@ -6,13 +6,13 @@
   "regexManagers": [
     {
       "fileMatch": [
-        "^awsd$"
+        "^awsd\\.rb$"
       ],
       "matchStringsStrategy": "recursive",
       "matchStrings": [
-        "datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\sver =\"(?<currentValue>.*)\"\\s"
+        "datasource=(?<datasource>.*?) depName=(?<depName>.*?)( extractVersion=(?<extractVersion>.+?)?\\sver =\"(?<currentValue>.*)\"\\s"
       ],
-      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}"
+      "extractVersionTemplate": "{{#if extractVersion}}{{{extractVersion}}}{{else}}^v?(?<version>.+)${{/if}}"
     }
   ]
 }
