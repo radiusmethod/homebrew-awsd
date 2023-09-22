@@ -7,7 +7,7 @@
     {
       "fileMatch": ["^Formula/awsd.rb$"],
       "matchStrings": [
-        "ver = \"(?<currentValue>.*?)\""
+        "ver = \"(?<currentValue>.*)\""
       ],
       "depNameTemplate": "pjaudiomv/awsd",
       "datasourceTemplate": "github-releases"
