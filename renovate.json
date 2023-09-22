@@ -6,7 +6,7 @@
   "regexManagers": [
     {
       "fileMatch": [
-        "^Formula.awsd.rb$"
+        "^Formula\/awsd.rb$"
       ],
       "matchStringsStrategy": "recursive",
       "matchStrings": [
@@ -17,8 +17,8 @@
     {
       "fileMatch": ["^Formula.awsd.rb$"],
       "matchStrings": ["ver = \"(?<currentValue>.*?\"\\n"],
-      "depNameTemplate": "pjaudiomv/awsd",
-      "datasourceTemplate": "gitlab-releases"
+      "depName": "pjaudiomv/awsd",
+      "datasource": "gitlab-releases"
     }
   ]
 }
