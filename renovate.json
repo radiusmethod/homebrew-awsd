@@ -5,11 +5,14 @@
   ],
   "regexManagers": [
     {
-      "fileMatch": [ "^awsd\\.rb$" ],
-      "matchStrings": [
-        "# renovate: datasource=(?<datasource>.+?) depName=(?<depName>.+?) ( extractVersion=(?<extractVersion>.+?))?\\s.*ver = \"?(?<currentValue>.+?)\"?\\s"
+      "fileMatch": [
+        "(^|/)awsd.rb$"
       ],
-      "extractVersionTemplate": "{{#if extractVersion}}{{{extractVersion}}}{{else}}^v?(?<version>.+)${{/if}}"
+      "matchStringsStrategy": "recursive",
+      "matchStrings": [
+        "# renovate: datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\s.*?ver = \"(?<currentValue>.*)\"\\s"
+      ],
+      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver-coerced{{/if}}"
     }
   ]
 }
