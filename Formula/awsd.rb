@@ -14,6 +14,16 @@ class Awsd < Formula
         system "make", "install", "BINDIR=#{bin}"
     end
 
+    def caveats
+      <<~EOS
+        To finalize the setup of awsd, you need to add the following to your bash profile or zshrc:
+
+        alias awsd="source _awsd"
+
+        Please make sure to either reload your ash profile or .zshrc or restart your shell session after making this change.
+      EOS
+    end
+
     test do
         system "true"
     end
