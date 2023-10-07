@@ -20,7 +20,7 @@ class Awsd < Formula
 
         alias awsd="source _awsd"
 
-        Please make sure to either reload your ash profile or .zshrc or restart your shell session after making this change.
+        Please make sure to either reload your bash profile or .zshrc or restart your shell session after making this change.
       EOS
     end
 
