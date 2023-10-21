@@ -9,7 +9,7 @@
       "matchStrings": [
         "ver = \"(?<currentValue>.*)\""
       ],
-      "depNameTemplate": "pjaudiomv/awsd",
+      "depNameTemplate": "radiusmethod/awsd",
       "datasourceTemplate": "github-releases"
     }
   ]
