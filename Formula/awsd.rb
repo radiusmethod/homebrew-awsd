@@ -3,7 +3,7 @@ class Awsd < Formula
     desc "AWS Profile Switcher in Go"
     homepage "https://github.com/radiusmethod/awsd"
     url "https://github.com/radiusmethod/awsd/archive/v0.1.0.tar.gz"
-    sha256 "5a77fb4ac6a3344552a22af55c1592581eb5e3f012ab423e021c9cbebcb5f6aa"
+    sha256 "ec41d366a93f63eb6888e97197360a1cfd9e4aeba67cec6cd0610c4d52dad36d"
     license "MIT"
     head "https://github.com/radiusmethod/awsd.git", branch: "main", :tag => ver
     version ver
