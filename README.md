@@ -8,3 +8,6 @@ automatically and submit a Pull Request as seen [here](https://github.com/radius
 bump and file hash changes. You can trigger renovate to run manually by going to the going to
 the [Dependency Dashboard](https://github.com/radiusmethod/homebrew-awsd/pull/12/files) and checking
 the renovate run checkbox.
+
+### Testing tap
+* To test or install tap locally you can run `brew install --build-from-source ./Formula/awsd.rb`

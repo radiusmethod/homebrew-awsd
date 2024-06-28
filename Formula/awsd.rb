@@ -16,6 +16,8 @@ class Awsd < Formula
 
     def caveats
       <<~EOS
+        For new installations:
+
         To finalize the setup of awsd, you need to add the following to your bash profile or zshrc:
 
         alias awsd="source _awsd"
