@@ -1,9 +1,9 @@
 class Awsd < Formula
-    ver = "v0.1.2"
+    ver = "v0.1.3"
     desc "AWS Profile Switcher in Go"
     homepage "https://github.com/radiusmethod/awsd"
-    url "https://github.com/radiusmethod/awsd/archive/refs/tags/v0.1.2.tar.gz"
-    sha256 "55cfd2cd344edda6f41405e0b49ad90d25647d88dee0b344b5de20d54e345f68"
+    url "https://github.com/radiusmethod/awsd/archive/refs/tags/v0.1.3.tar.gz"
+    sha256 "362a66492881978cfccc3c5e97202545c40f09c0832ee52f1509b9eeb7c724db"
     license "MIT"
     head "https://github.com/radiusmethod/awsd.git", branch: "main", :tag => ver
     version ver
