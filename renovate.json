@@ -1,14 +1,13 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:base"
+    "config:recommended"
   ],
-  "regexManagers": [
+  "customManagers": [
     {
-      "fileMatch": ["^Formula/awsd.rb$"],
-      "matchStrings": [
-        "ver = \"(?<currentValue>.*)\""
-      ],
+      "customType": "regex",
+      "managerFilePatterns": ["/^Formula/awsd.rb$/"],
+      "matchStrings": ["ver = \"(?<currentValue>.*)\""],
       "depNameTemplate": "radiusmethod/awsd",
       "datasourceTemplate": "github-releases"
     }
