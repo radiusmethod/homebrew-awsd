@@ -29,16 +29,19 @@ version. Check that `Casks/awsd.rb` moved after each release.
 
 ### Testing tap
 
-Install straight from a local checkout:
+Homebrew no longer accepts a file path for either of these, so both take the qualified cask name
+and read from your local clone of the tap:
 
 ```sh
-brew install --cask ./Casks/awsd.rb
+brew audit --cask radiusmethod/awsd/awsd     # silent means it passed
+brew install --cask radiusmethod/awsd/awsd
 ```
 
-Check the generated cask before it ships:
+Those read the tap clone Homebrew manages, not this working copy. To test an uncommitted change,
+edit it there:
 
 ```sh
-brew audit --cask ./Casks/awsd.rb
+brew --repo radiusmethod/awsd    # /opt/homebrew/Library/Taps/radiusmethod/homebrew-awsd
 ```
 
 To reproduce what a release would write without publishing anything, run this in an awsd checkout
