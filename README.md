@@ -2,12 +2,58 @@
 This repository maintains a [homebrew tap](https://docs.brew.sh/Taps) for [awsd](https://github.com/radiusmethod/awsd).
 For instructions on installing [awsd](https://github.com/radiusmethod/awsd) please see repository [here](https://github.com/radiusmethod/awsd?tab=readme-ov-file#installation).
 
+```sh
+brew tap radiusmethod/awsd
+brew install awsd
+```
+
+### Casks/awsd.rb is generated
+
+As of awsd v0.4.0 this tap ships a **cask** carrying prebuilt binaries, not a formula that compiles
+from source. `Casks/awsd.rb` is written by [GoReleaser](https://goreleaser.com) from
+`.goreleaser.yaml` in the [awsd](https://github.com/radiusmethod/awsd) repository.
+
+**Do not edit `Casks/awsd.rb` by hand.** The next release overwrites it. To change the cask,
+including its caveats text, edit `homebrew_casks` in awsd's `.goreleaser.yaml`.
+
 ### Updating Tap
- * In most cases when a new version is tagged for [awsd](https://github.com/radiusmethod/awsd) renovate should pick this up
-automatically and submit a Pull Request as seen [here](https://github.com/radiusmethod/homebrew-awsd/pull/12/files) with version
-bump and file hash changes. You can trigger renovate to run manually by going to the going to
-the [Dependency Dashboard](https://github.com/radiusmethod/homebrew-awsd/pull/12/files) and checking
-the renovate run checkbox.
+
+Tagging a release in [awsd](https://github.com/radiusmethod/awsd) is the whole process. GoReleaser
+builds the binaries, publishes the GitHub release, and pushes an updated `Casks/awsd.rb` straight
+to `main` here. There is no Pull Request to review and no renovate bump to wait for.
+
+The push needs the `HOMEBREW_TAP_GITHUB_TOKEN` secret in the awsd repository, holding a token with
+write access to this one. If that token is missing or expired the release still publishes and only
+the tap update is skipped, so a release that appears green can still leave this repo on the old
+version. Check that `Casks/awsd.rb` moved after each release.
 
 ### Testing tap
-* To test or install tap locally you can run `brew install --build-from-source ./Formula/awsd.rb`
+
+Install straight from a local checkout:
+
+```sh
+brew install --cask ./Casks/awsd.rb
+```
+
+Check the generated cask before it ships:
+
+```sh
+brew audit --cask ./Casks/awsd.rb
+```
+
+To reproduce what a release would write without publishing anything, run this in an awsd checkout
+and read `dist/homebrew/Casks/awsd.rb`:
+
+```sh
+goreleaser release --snapshot --clean --skip=publish
+```
+
+### Upgrading from the formula
+
+Homebrew does not cleanly move an installed formula to a cask of the same name. If `brew upgrade`
+complains, reinstall:
+
+```sh
+brew uninstall awsd
+brew install radiusmethod/awsd/awsd
+```
