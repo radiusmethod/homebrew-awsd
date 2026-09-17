@@ -34,7 +34,7 @@ cask "awsd" do
 
   binary "awsd"
 
-  postflight do
+  postflight_steps do
     if system_command("/usr/bin/xattr", args: ["-h"]).exit_status == 0
       system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/awsd"]
     end
